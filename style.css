@@ -199,6 +199,15 @@ nav .say-hello-button li {
     align-items: center;
 }
 
+.project a {
+    color: #64FFDA;
+    font-size: 0.75rem;
+}
+
+.link {
+   padding-top: 1rem;
+}
+
 .frontend-development, .product-management {
     border-radius: 16px;
     border: solid #64FFDA 2px;
@@ -259,14 +268,15 @@ nav .say-hello-button li {
 }
 
 #projects img {
-    height: 22rem;
-    width: auto;
-    max-width: 20rem;
+    max-height: 15rem;
+    height: auto;
+    max-width: 80vw;
     border-radius: 16px;
-    object-fit: cover;
+    object-fit:fill;
     object-position: top;
     top: 0;
     position: relative;
+    box-shadow: 10px 8px #64FFDA;
 }
 
 #projects article {
@@ -303,22 +313,55 @@ nav .say-hello-button li {
     gap: 3.5rem;
 }
 
+#tengdu-website, #tendu-app {
+    width: 100%;
+    min-width: 50%;
+}
+
+.project {
+    align-items: center;
+    text-align: center;
+}
+
+.project-info-container ul {
+    text-align: center;
+    list-style: none;
+}
+
 @media screen and (min-width: 800px) {
-    #projects-container{
-        display: inline-flex;
-        flex-direction: row;
+    /* #projects-container{
         align-items: center;
         justify-content: center;
-        width: 100%;
-    }
+        width: 100vw;
+    } */
 
+  #projects article {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #projects .project-info-container {
+    width: 50%;
+  }
+
+  #projects .image-container {
+    width: 50%
+  }
+
+  #projects img {
+    max-height: 22rem;
+    height: 15rem;
+    width: auto;
+    max-width: 100%;
+    border-radius: 16px;
+    object-fit:cover;
+    object-position: left;
+    top: 0;
+    position: relative;
+    box-shadow: 10px 8px #64FFDA;
+}
     #projects article {
         gap: 1rem;
-    }
-
-    #tengdu-website, #tendu-app {
-        width: 100%;
-        min-width: 50%;
     }
 
     #projects-container {
@@ -326,7 +369,7 @@ nav .say-hello-button li {
         max-width: fit-content;
     }
 
-    #tengdu-website div, #tengdu-app div {
+    project div {
         max-width: 300px;
 }
 }
